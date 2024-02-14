@@ -1,5 +1,5 @@
 # Imports:
-import requests, json, time
+import requests, time
 
 # View MojangAPI related stuff here: https://wiki.vg/Mojang_API
 # Please note the API has a rate limit of 600 requests in a 10 minute interval.
@@ -24,7 +24,7 @@ try:
         response = requests.get("https://api.mojang.com/users/profiles/minecraft/{0}".format(word))
         if response.status_code == 204:
             print("[INFO] {0} is not taken.".format(word))
-            unclaimed_file.write(word + ",")
+            unclaimed_file.write(f'{word}\n')
 
         # Sleep for one second (Only lower if your list is short):
         time.sleep(1)
@@ -34,6 +34,6 @@ try:
     unclaimed_file.close()
 
 except Exception as e:
-    print('[INFO] An unexpected error occured. Words file might be corrupt.')
+    print(f'[INFO] An unexpected error occured. Words file might be corrupt. Error msg:\n{e}')
 
 exit()

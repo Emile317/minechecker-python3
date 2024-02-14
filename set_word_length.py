@@ -1,5 +1,8 @@
 import json
 
+# set to True or False depending if you want the wordslist to be filtered
+DONT_FILTER_BY_LENGTH = True
+
 # set minimum and maximum word length here (both included)
 SET_MIN_LENGTH_HERE = 3
 SET_MAX_LENGTH_HERE = 20
