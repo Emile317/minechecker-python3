@@ -24,6 +24,7 @@ pip install requests
 ### Use bash script
 
 To avoid the program from stopping when an error occurs, run the `keep_running.sh` script in a bash terminal.
+
 ---
 
 This python script checks names with a one second interval because of rate limiting. Let the python script run for a few hours if you have a large list of words/names.
